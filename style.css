@@ -1,1 +1,83 @@
-
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fdf6f0;
+  color: #333;
+}
+/* HEADER + NAVIGATION FLEX */
+header {
+  background: #6f4e37;
+  color: white;
+  padding: 1rem;
+  display: flex; /* FLEX 1 */
+  justify-content: space-between; /* Espace entre logo et menu */
+  align-items: center; /* Centre verticalement */
+  flex-wrap: wrap; /* Passe à la ligne sur mobile */
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav ul {
+  display: flex; /* FLEX 2 */
+  list-style: none;
+  gap: 1.5rem; /* Espace entre les liens */
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+/* CONTENU PRINCIPAL FLEX */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+.cards {
+  display: flex; /* FLEX 3 */
+  flex-wrap: wrap; /* Passe à la ligne automatiquement */
+  gap: 1.5rem;
+  justify-content: center; /* Centre les cartes */
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  flex: 1 1 300px; /* FLEXIBLE: grandit, rétrécit, base 300px */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+/* FOOTER FLEX */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  display: flex; /* FLEX 4 */
+  justify-content: center;
+  align-items: center;
+}
+/* RESPONSIVE : quand l'écran est < 700px */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column; /* Le menu passe sous le logo */
+    gap: 1rem;
+  }
+  nav ul {
+    flex-direction: column; /* Les liens passent en colonne */
+    align-items: center;
+  }
